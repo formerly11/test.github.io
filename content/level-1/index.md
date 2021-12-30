@@ -11,3 +11,5 @@ index
 testImage
 
 {{< img name="forest-1" size="large" lazy=false >}}
+
+![](images/forest-1.jpg)

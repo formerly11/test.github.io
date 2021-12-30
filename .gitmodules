@@ -1,0 +1,9 @@
+[submodule "themes/docsy-example"]
+	path = themes/docsy-example
+	url = https://github.com/google/docsy-example.git
+[submodule "themes/compose"]
+	path = themes/compose
+	url = https://github.com/onweru/compose.git
+[submodule "themes/geekdoc"]
+	path = themes/geekdoc
+	url = https://github.com/thegeeklab/hugo-geekdoc.git

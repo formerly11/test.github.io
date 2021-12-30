@@ -25,12 +25,16 @@ jobs:
       - name: Run a multi-line script
         env:
           super_secret: ${{secrets.SUPERSECRET}}
-        uses: nerd4ever/ssh-action@master
-        with:
-          command: |
-            cd /root/myhugo/quickstart
-            git pull --rebase
-          host: pre-iiot.bluesphere.cloud
-          user: root
-          key: ${{secrets.SUPERSECRET}}
+        run: |
+          ssh root@pre-iiot.bluesphere.cloud -i ${{secrets.SUPERSECRET}}
+          cd /root/myhugo/quickstart
+          git pull --rebase
+#         uses: nerd4ever/ssh-action@master
+#         with:
+#           command: |
+#             cd /root/myhugo/quickstart
+#             git pull --rebase
+#           host: pre-iiot.bluesphere.cloud
+#           user: root
+#           key: ${{secrets.SUPERSECRET}}
           

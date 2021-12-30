@@ -23,14 +23,13 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.SUPERSECRET }}
-            script: |
-              cd /root/myhugo/quickstart
-              git pull --rebase
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SUPERSECRET }}
+          script: |
+            cd /root/myhugo/quickstart
+            git pull --rebase
 
           
